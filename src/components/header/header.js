@@ -11,7 +11,7 @@ const Header = () => (
       <NavigationInner>
         <Title>Cocktail Search</Title>
         <SearchSection>
-          <Input placeholder="Search" onChange={(e) => console.log(e.target.value)} />
+          <Input placeholder="Search for cocktails..." onChange={(e) => console.log(e.target.value)} />
           <img src={search} alt="" style={{ marginLeft: '-24px' }} />
         </SearchSection>
       </NavigationInner>
