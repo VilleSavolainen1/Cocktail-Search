@@ -11,15 +11,24 @@ export const Navigation = styled.div`
 `;
 
 export const NavigationInner = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (min-width: 800px){
+      width: 50%;
+      margin-left: -90px;
+  }
 `;
 
 export const Title = styled.h1`
   color: #fff;
   font-family: 'Bitter', serif;
+`;
+
+export const SearchSection = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const Input = styled.input`
