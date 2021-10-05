@@ -4,7 +4,7 @@ My goal with this project was to simulate a professional work environment.
 This time I was focusing on the frontend and decided to use an existing API.
 
 * I built this app using [Figma](https://figma.com) designs
-* I worked with tasks using [Issue Tracker](ec2-13-51-252-148.eu-north-1.compute.amazonaws.com/)
+* I worked with tasks using [Issue Tracker](http://ec2-13-51-252-148.eu-north-1.compute.amazonaws.com/)
 * I used feature branches
 
 ## What I have learned
