@@ -1,19 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import SearchForm from './searchForm';
 import {
-  Navigation, NavigationInner, Title, Input,
-  SearchSection,
+  Navigation, NavigationInner, Title,
+  LinkSection, NavLink,
 } from './style';
-import search from '../../images/search.png';
+
+const linkStyle = {
+  textDecoration: 'none',
+};
 
 const Header = () => (
   <div>
     <Navigation>
       <NavigationInner>
-        <Title>Cocktail Search</Title>
-        <SearchSection>
-          <Input placeholder="Search for cocktails..." onChange={(e) => console.log(e.target.value)} />
-          <img src={search} alt="" style={{ marginLeft: '-24px' }} />
-        </SearchSection>
+        <Link style={linkStyle} to="/"><Title>Cocktail Search</Title></Link>
+        <SearchForm />
+        <LinkSection>
+          <Link style={linkStyle} to="/about"><NavLink>About</NavLink></Link>
+        </LinkSection>
       </NavigationInner>
     </Navigation>
   </div>
