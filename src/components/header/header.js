@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import SearchForm from './searchForm';
 import {
@@ -10,12 +11,12 @@ const linkStyle = {
   textDecoration: 'none',
 };
 
-const Header = () => (
+const Header = ({ setItems }) => (
   <div>
     <Navigation>
       <NavigationInner>
         <Link style={linkStyle} to="/"><Title>Cocktail Search</Title></Link>
-        <SearchForm />
+        <SearchForm setItems={setItems} />
         <LinkSection>
           <Link style={linkStyle} to="/about"><NavLink>About</NavLink></Link>
         </LinkSection>
@@ -23,5 +24,8 @@ const Header = () => (
     </Navigation>
   </div>
 );
+Header.propTypes = {
+  setItems: PropTypes.func.isRequired,
+};
 
 export default Header;

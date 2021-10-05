@@ -12,6 +12,7 @@ export const Navigation = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  z-index: 6;
   @media only screen and (min-width: 800px){
     height: 70px;
   }
@@ -52,7 +53,9 @@ export const NavLink = styled.h4`
 export const SearchSection = styled.div`
   display: flex;
   align-items: center;
-  margin-left: -100px;
+  @media only screen and(min-width: 800px){
+    margin-left: -100px;
+  }
 `;
 
 export const Input = styled.input`

@@ -1,20 +1,35 @@
 import React from 'react';
-import { Container, InnerContainer, Card } from './style';
+import PropTypes from 'prop-types';
+import './style.css';
+import {
+  Container, InnerContainer,
+} from './style';
 
-// eslint-disable-next-line react/prop-types
 const Content = ({ items }) => {
-  // eslint-disable-next-line react/prop-types
   console.log(items);
-  // eslint-disable-next-line react/prop-types
+
   let renderItems;
   if (items) {
-    // eslint-disable-next-line react/prop-types
     renderItems = items.map((i) => (
-      <ul key={i.idDrink}>
-        <Card>
-          <img src={i.strDrinkThumb} style={{ height: '250px' }} alt="" />
-          <p>{i.strDrink}</p>
-        </Card>
+      <ul key={i.idDrink} className="list">
+        <div key={i.idDrink} className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <img
+                src={i.strDrinkThumb}
+                style={{
+                  height: '220px', width: '230px', padding: '5px',
+                }}
+                alt=""
+              />
+              <h4>{i.strDrink}</h4>
+            </div>
+            <div className="flip-card-back">
+              <h2>{i.strDrink}</h2>
+              <p style={{ padding: '8px' }}>{i.strInstructions}</p>
+            </div>
+          </div>
+        </div>
       </ul>
     ));
   }
@@ -28,6 +43,10 @@ const Content = ({ items }) => {
       </Container>
     </div>
   );
+};
+
+Content.propTypes = {
+  items: PropTypes.func.isRequired,
 };
 
 export default Content;

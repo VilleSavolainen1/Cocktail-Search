@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import axios from 'axios';
 import { SearchSection, Input } from './style';
 import search from '../../images/search.png';
 
-const SearchForm = () => {
+const SearchForm = ({ setItems }) => {
   const [searchValue, setSearchValue] = useState('');
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`);
+    setItems(res.data.drinks);
+  };
   return (
     <div>
-      <form onSubmit={() => alert('submitted')}>
+      <form onSubmit={onSubmit}>
         <SearchSection>
           <Input placeholder="Search for cocktails..." value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
           <button
@@ -21,6 +29,9 @@ const SearchForm = () => {
       </form>
     </div>
   );
+};
+SearchForm.propTypes = {
+  setItems: PropTypes.func.isRequired,
 };
 
 export default SearchForm;

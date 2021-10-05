@@ -20,7 +20,7 @@ function App() {
     <Router>
       <div className="container">
         <header className="header">
-          <Header Link={Link} />
+          <Header Link={Link} setItems={setItems} />
         </header>
         <Switch>
           <Route path="/about">
