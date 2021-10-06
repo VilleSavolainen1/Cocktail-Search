@@ -10,7 +10,7 @@ This time I was focusing on the frontend and decided to use an existing API.
 ## What I have learned
 
 * Using ESLint Javascript linter
-* Testing with Jest and React Testing Library
+* Writing tests Jest and React Testing Library
 
 ### `npm start`
 
