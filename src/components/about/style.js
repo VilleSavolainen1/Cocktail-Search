@@ -11,7 +11,7 @@ export const ContainerInner = styled.div`
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin-top: 100px;
+    margin-top: 160px;
     padding: 20px;
     background-color: #1F1D2B;
     justify-content: center;

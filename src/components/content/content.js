@@ -6,8 +6,6 @@ import {
 } from './style';
 
 const Content = ({ items }) => {
-  console.log(items);
-
   let renderItems;
   if (items) {
     renderItems = items.map((i) => (
@@ -15,17 +13,17 @@ const Content = ({ items }) => {
         <div key={i.idDrink} className="flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front">
+              <div className="cocktail-name">
+                <h1 className="header">{i.strDrink}</h1>
+              </div>
               <img
+                className="cocktail-image"
                 src={i.strDrinkThumb}
-                style={{
-                  height: '220px', width: '230px', padding: '5px',
-                }}
                 alt=""
               />
-              <h4>{i.strDrink}</h4>
             </div>
             <div className="flip-card-back">
-              <h2>{i.strDrink}</h2>
+              <h1>{i.strDrink}</h1>
               <p style={{ padding: '8px' }}>{i.strInstructions}</p>
             </div>
           </div>

@@ -10,9 +10,10 @@ export const Container = styled.div`
 
 export const InnerContainer = styled.div`
     display: flex;
-    width: 100%;
+    width: 80%;
     flex-flow: row wrap;
-    margin-top: 100px;
+    margin-top: 160px;
     color: #fff;
     justify-content: center;
+    align-items: center;
 `;
