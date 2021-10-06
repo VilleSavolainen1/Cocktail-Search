@@ -24,4 +24,13 @@ describe('Header', () => {
     userEvent.click(link1);
     expect(screen.getByRole('heading', { name: /about cocktail search/i })).toBeInTheDocument();
   });
+
+  test('"Search button leads to home page"', () => {
+    setup();
+    const link1 = screen.getByRole('link', { name: 'About' });
+    userEvent.click(link1);
+    const link2 = screen.getByRole('link', { name: 'Cocktail Search' });
+    userEvent.click(link2);
+    screen.debug();
+  });
 });

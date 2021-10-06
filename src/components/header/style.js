@@ -41,6 +41,7 @@ export const Title = styled.h1`
 export const LinkSection = styled.div`
   display: flex;
   flex-direction: row;
+  font-size: 20px;
 `;
 
 export const NavLink = styled.h4`

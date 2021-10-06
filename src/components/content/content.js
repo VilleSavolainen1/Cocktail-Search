@@ -6,9 +6,8 @@ import {
 } from './style';
 
 const Content = ({ items }) => {
-  console.log(items);
   let renderItems;
-  if (items !== null) {
+  if (items !== null && typeof (items) !== 'undefined') {
     renderItems = items.map((i) => (
       <ul key={i.idDrink} className="list">
         <div key={i.idDrink} className="flip-card">
