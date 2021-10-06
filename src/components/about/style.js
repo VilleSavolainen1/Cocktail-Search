@@ -13,7 +13,6 @@ export const ContainerInner = styled.div`
     width: 80%;
     margin-top: 160px;
     padding: 20px;
-    background-color: #1F1D2B;
     justify-content: center;
     border-radius: 6px;
     @media only screen and (min-width: 800px){
@@ -24,4 +23,5 @@ export const ContainerInner = styled.div`
 export const Header = styled.h1`
     font-family: 'Bitter', serif;
     color: #fff;
+    font-size: 42px;
 `;
