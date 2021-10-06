@@ -27,7 +27,7 @@ function App() {
             <About />
           </Route>
           <Route path="/">
-            <Content items={items} />
+            <Content items={items} setItems={setItems} />
           </Route>
         </Switch>
       </div>

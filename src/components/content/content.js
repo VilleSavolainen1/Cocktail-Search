@@ -6,8 +6,9 @@ import {
 } from './style';
 
 const Content = ({ items }) => {
+  console.log(items);
   let renderItems;
-  if (items) {
+  if (items !== null) {
     renderItems = items.map((i) => (
       <ul key={i.idDrink} className="list">
         <div key={i.idDrink} className="flip-card">
@@ -30,6 +31,8 @@ const Content = ({ items }) => {
         </div>
       </ul>
     ));
+  } else {
+    renderItems = <h1 style={{ fontSize: '48px' }}>Sorry, no results...</h1>;
   }
 
   return (

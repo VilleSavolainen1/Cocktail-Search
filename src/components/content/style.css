@@ -48,8 +48,9 @@
 .flip-card-back{
     transform: rotateY(-180deg);
     color: #fff;
-    background-color: #5d5586;
+    background-color: #201f22;
     text-align: center;
+    font-family: 'Acme', sans-serif;
 }
 
 .cocktail-image{
